@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box; /* allows us to include the padding and border in an element's total width and height. */
+}
+
+:root {
+  --clr-background: #eceff1;
+  --clr-white: #ffffff;
+  --clr-primary: #5dc5fd;
+  --clr-gray: #263238;
+  --font-size: 16px;
+  --border-radius: 0.2em;
+}
+
+body {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: var(--font-size);
+  color: var(--clr-gray);
+  background-color: var(--clr-background);
+}
+
+.navbar {
+  width: 100vw;
+  background-color: var(--clr-primary);
+  margin: 0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  height: 3em;
+  padding: 0;
+}
+
+.navbar ul li {
+  padding-right: 2em;
+  font-weight: bold;
+  color: var(--clr-white);
+}
+
+svg {
+  fill: var(--clr-white);
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.navbar ul li:first-child {
+  margin-right: auto;
+  margin-left: 2em;
+}
+
+#wrapper-main {
+  margin: 2em;
+}
+
+.header {
+  display: flex;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -1em;
+}
+
+#search {
+  background-color: var(--clr-white);
+  border: var(--border-radius);
+  width: 15em;
+  height: 2.5em;
+  padding: auto;
+  display: flex;
+  align-items: center;
+  color: var(--clr-gray);
+}
+
+.material-icons {
+  padding: 0 0.2em;
+  font-size: 1.5em;
+}
+
+#wrapper-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5em;
+}
+
+.container {
+  background-color: var(--clr-white);
+  border-radius: var(--border-radius);
+  padding: 1em;
+  border-top: 5px solid var(--clr-primary);
+}
+
+.container h2 {
+  margin-bottom: 0.2em;
+  margin-top: 0.5em;
+}
+
+.container p.date {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: -0.5em;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 550px) {
+  body {
+    font-size: 14px;
+  }
+
+  .header {
+    flex-direction: column;
+    margin-bottom: 2em;
+  }
+
+  #search {
+    width: 100%;
+  }
+
+  #wrapper-grid {
+    grid-template-columns: 1fr;
+  }
+}
